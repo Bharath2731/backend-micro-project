@@ -17,6 +17,12 @@ const errorHandler = (error,res)=>{
     })
 }
 
+app.get('/',(req,res)=>{
+    res.json({
+        message: 'go to /health to check the status of the server'
+    })
+})
+
 app.get("/health", (req, res) => {
     res.json({
       status: "success",
